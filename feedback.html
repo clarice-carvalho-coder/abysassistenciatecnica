@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback do Cliente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="feedback-page">
+
+     <header class="menu">
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="Logo da Marca"></a>
+            </div>
+
+            <ul>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="avaliacoes.html">Avaliações</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <img src="icone-degrade.png" alt="Polvo ícone da marca" class="forms-icone">
+        <h2>Deixe seu Feedback!</h2>
+
+        <form id="feedbackForm">
+            <div class="campo">
+                <label for="nome" class="pergunta">Nome:</label>
+                <input type="text" id="nome" name="nome" required minlength="3" required>
+            </div>
+
+            <div class="campo">
+                <label for="email" class="pergunta">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="campo">
+                <label for="senha" class="pergunta">Senha:</label>
+                <input type="password" id="senha" name="senha" required minlength="6">
+            </div>
+
+            <div class="campo">
+                <label for="serviço" class="pergunta">Tipo de serviço:</label>
+                <select id="servico" name="servico" required>
+                    <option value="">Selecione um serviço...</option>
+                    <option value="consultoria">Consultoria</option>
+                    <option value="instalacao">Instalação de Software</option>
+                    <option value="manutencao">Manutenção (limpeza, upgrade, troca de peças) </option>
+                    <option value="suporte-tecnico">Suporte técnico</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="estrelas" class="pergunta">De 0 a 5 estrelas, como você avalia sua experiência conosco?</label>
+                <div class="estrelas">
+                    <input type="radio" id="estrela5" name="rating" value="5" required>
+                    <label for="estrela5">★</label>
+
+                    <input type="radio" id="estrela4" name="rating" value="4">
+                    <label for="estrela4">★</label>
+
+                    <input type="radio" id="estrela3" name="rating" value="3">
+                    <label for="estrela3">★</label>
+
+                    <input type="radio" id="estrela2" name="rating" value="2">
+                    <label for="estrela2">★</label>
+
+                    <input type="radio" id="estrela1" name="rating" value="1">
+                    <label for="estrela1">★</label>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label for="Seleção" class="pergunta">Por favor, avalie os seguintes aspectos do nosso serviço:</label>
+                <table class="rating-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pontualidade do serviço</td>
+                            <td><input type="radio" name="pontualidade" value="1" required></td>
+                            <td><input type="radio" name="pontualidade" value="2"></td>
+                            <td><input type="radio" name="pontualidade" value="3"></td>
+                            <td><input type="radio" name="pontualidade" value="4"></td>
+                            <td><input type="radio" name="pontualidade" value="5"></td>
+                        </tr>
+                        <tr>
+                            <td>Qualidade do serviço</td>
+                            <td><input type="radio" name="qualidade" value="1"></td>
+                            <td><input type="radio" name="qualidade" value="2"></td>
+                            <td><input type="radio" name="qualidade" value="3"></td>
+                            <td><input type="radio" name="qualidade" value="4"></td>
+                            <td><input type="radio" name="qualidade" value="5"></td>
+                        </tr>
+                        <tr>
+                            <td>Profissionalismo da equipe</td>
+                            <td><input type="radio" name="profissionalismo" value="1"></td>
+                            <td><input type="radio" name="profissionalismo" value="2"></td>
+                            <td><input type="radio" name="profissionalismo" value="3"></td>
+                            <td><input type="radio" name="profissionalismo" value="4"></td>
+                            <td><input type="radio" name="profissionalismo" value="5"></td>
+                        </tr>
+                        <tr>
+                            <td>Facilidade de comunicação</td>
+                            <td><input type="radio" name="comunicacao" value="1"></td>
+                            <td><input type="radio" name="comunicacao" value="2"></td>
+                            <td><input type="radio" name="comunicacao" value="3"></td>
+                            <td><input type="radio" name="comunicacao" value="4"></td>
+                            <td><input type="radio" name="comunicacao" value="5"></td>
+                        </tr>
+                        <tr>
+                            <td>Custo-benefício</td>
+                            <td><input type="radio" name="custobeneficio" value="1"></td>
+                            <td><input type="radio" name="custobeneficio" value="2"></td>
+                            <td><input type="radio" name="custobeneficio" value="3"></td>
+                            <td><input type="radio" name="custobeneficio" value="4"></td>
+                            <td><input type="radio" name="custobeneficio" value="5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="campo">
+                <label for="mensagem" class="pergunta">Por fim, descreva sua experiência:</label>
+                <textarea id="mensagem" name="mensagem"></textarea>
+            </div>
+
+            <button type="submit">Enviar feedback</button>
+        </form>
+    </div>
+    
+    <script src="feedback.js"></script>
+</body>
+</html>
